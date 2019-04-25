@@ -1,5 +1,5 @@
-//Look at line 103-110.
-
+//Look at line 105-111(add task to table).
+//Look at line 137-141 and 145-151(add function to "+" and "-").
 import java.awt.EventQueue;
 import java.util.LinkedList;
 
@@ -134,12 +134,22 @@ public class Note {
 		btnAddNewEntry = new JButton("+");
 		btnAddNewEntry.setBounds(10, 11, 145, 53);
 		notepanel.add(btnAddNewEntry);
-		
+		btnAddNewEntry.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				model.addRow(new Object[] {null, null});
+			}
+		});
 		button = new JButton("-");
 		button.setBounds(165, 11, 145, 53);
 		notepanel.add(button);
+		button.addActionListener(new ActionListener() {
+			public void actionPerformed(ActionEvent e) {
+				if(model.getRowCount()>0) {
+					model.removeRow(model.getRowCount()-1);
+				}
+			}
+		});
 		
-		
-
+	
 	}
 
