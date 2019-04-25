@@ -1,102 +1,73 @@
-package CSc2720FinalProj;
+package Project;
 
 public class Location {
-    
-    private Location next;
-    private Location previous;
-    private String name;
-    private String date;
-    private String time;
-    private String address;
-    private String reminderFrq;
-    private String reminderLoc;
-    
-    //default constructor
-    public Location() {
-        this.next = null;
-        this.previous = null;
-        this.name = "";
-        this.date = "__/__/____";
-        this.time = "__:__:__";
-        this.address = "";
+
+
+    String aStreet;
+    String aCity;
+    String aState;
+    String aZip;
+
+    public Location(String aStreet, String aCity, String aState, String aZip) {
+        this.aStreet = aStreet;
+        this.aCity = aCity;
+        this.aState = aState;
+        this.aZip = aZip;
+    }
+    public Location( String zip) {
+        aZip = zip;
+
     }
 
-    public Location(String name, String date, String time, String address) {
-        this.next = null;
-        this.previous = null;
-        this.name = name;
-        this.date = date;
-        this.time = time;
-        this.address = address;
-    }      
 
-    public Location getNext() {
-        return this.next;
-    }
-    
-    public void setNext(Location l) {
-        if(l != null)
-            this.next = l;
-        else
-            return;
-    }    
-    
-    public Location getPrevious() {
-        return this.previous;
-    }
-    
-    public void setPrevious(Location l) {
-        if(l != null)
-            this.previous = l;
-        else
-            return;
-    }    
-    
-    public String getName() {
-        return this.name;
+    //getters & setters
+
+    //Street
+    public String getaStreet() {
+        return aStreet;
     }
 
-    public void setName(String s) {
-        this.name = s;
+    public void setaStreet(String aStreet) {
+        this.aStreet = aStreet;
     }
 
-    public String getDate() {
-        return this.date;
+    //State
+    public String getaState() {
+        return aState;
     }
 
-    public void setDate(String s) {
-        this.date = s;
+    public void setaState(String aState) {
+        this.aState = aState;
     }
-    
-    public String getTime() {
-        return this.time;
+    //City
+
+    public String getaCity() {
+        return aCity;
     }
 
-    public void setTime(String s) {
-        this.time = s;
-    }
-    
-    public String getAddress() {
-        return this.address;
+    public void setaCity(String aCity) {
+        this.aCity = aCity;
     }
 
-    public void setAddress(String s) {
-        this.address = s;
+    //ZipCode
+    public String getaZip() {
+        return aZip;
     }
 
-    public String getReminderFrq() {
-        return this.reminderFrq;
+    public void setaZip(String aZip) {
+        this.aZip = aZip;
     }
 
-    public void setName(String s) {
-        this.reminderFrq = s;
+
+    public String toString() {
+        return ( "Location ZipCode, " + aZip);
     }
-    
-    public String getReminderLoc() {
-        return this.reminderLoc;
-    }
-    
-    public void setReminderLoc(String s) {
-        this.reminderLoc = s;
-    }
+
 }
+
+
+
+
+
+
+

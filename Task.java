@@ -13,19 +13,19 @@ public class Task {
 
 
 
-    public Task(String taskNote)
+    public Task(String task)
     {
         this.task = task;
 
     }
 
 
-    public String getTaskNote() {
+    public String getTask() {
         return task;
     }
 
-    public void setTaskNote(String taskNote) {
-        this.task = taskNote;
+    public void setTask(String task) {
+        this.task = task;
     }
 
     public Calendar compare(Calendar c) {
