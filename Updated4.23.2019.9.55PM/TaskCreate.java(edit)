@@ -1,4 +1,4 @@
-package CSc2720FinalProj;
+//Line 158-161.
 
 import java.awt.EventQueue;
 
@@ -132,7 +132,7 @@ public class TaskCreate {
 		
 		// REPEAT EVERY...
 		JComboBox comboBox = new JComboBox();
-		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "Everyday", "Every week", "Every 2 weeks", "Every month", "Every Year"}));
+		comboBox.setModel(new DefaultComboBoxModel(new String[] {"", "Once", "Everyday", "Every week", "Every 2 weeks", "Every month", "Every Year"}));
 		comboBox.setBounds(384, 294, 190, 30);
 		panel.add(comboBox);
 		
@@ -144,10 +144,11 @@ public class TaskCreate {
 		
 		// CREATES A TASK
 		JButton btnAddTask = new JButton("Add Task");
+		Note s = new Note();
 		btnAddTask.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
 				/*
-				 * PSEUDOCODE:
+				 * PSUDOCODE:
 				 * Probably save the input, then only show Task, Comment, Date(?)
 				 *
 				 * 
@@ -156,6 +157,10 @@ public class TaskCreate {
 				 * then
 				 * frame.dispose();
 				 */
+				Location l = new Location(textField.getText());
+				s.addNotes(l.getaZip());
+				s.addNotes(textPane.getText());
+				frame.dispose();
 			}
 		});
 		btnAddTask.setBounds(10, 339, 125, 60);
