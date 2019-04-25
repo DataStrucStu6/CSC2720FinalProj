@@ -106,9 +106,8 @@ public class Note {
 				model.addColumn("Location");
 				model.addColumn("Comment");
 				String[] task = new String[numofTasks()];
-				for(int i=0; i<numofTasks(); i++) {
-					task[i] = getNotes(i+1);
-					model.addRow(new Object[] {"Hello", task[i]});
+				for(int i=1; i<numofTasks(); i=i+2) {
+					model.addRow(new Object[] {getNotes(i), getNotes(i+1)});
 				}
 				scrollPane.setViewportView(table);
 				table.addMouseWheelListener(new MouseWheelListener() {
@@ -143,4 +142,4 @@ public class Note {
 		
 
 	}
-}
+
